@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{ padding:0; margin:0; border:none; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:13px;}
+
+.clr{ clear:both; overflow:hidden; padding:0; margin:0; border:none; font-size:0%;}
+.clearfix:after{ font-size:0%; content:''; display:block; clear:both; height:0;}
+
+a{ outline:none;}
+
+.main_container{ position:absolute; top:0; left:0; height:100%; width: 100%; background: url(dreamy-piano.jpg) right bottom no-repeat scroll; background-size: cover;}
+
+
+/*		cm-editor		*/
+
+#cm-editor{ width:320px; min-height:135px; color:#fff; left:450px; top:50px; position:absolute; }
+
+.dragger{ background: url(drag.png) center no-repeat scroll; cursor:pointer; width:45px; height:45px }
+
+.cm-tabs{ width:45px; float:left;}
+.cm-tabs a{ display:block; height:45px; text-align:center; text-decoration:none; color:#fff; background-color:#1a9b62;}
+.cm-tabs a + a{ background:#22b372; }
+.cm-tabs a + a + a { background:#16a263;}
+
+.cm-panel{ padding:16px; margin-left:45px;  background:rgba(46, 47, 49, 1); width:243px;}
+
+.cm-panel { display:none;}
+
+.cm-panel:target{ display:block;}
+
+.field-wrap { margin-bottom:10px; overflow:hidden;  }
+.field-wrap label { float:left; width:96px; }
+
+input { outline:none; padding:0; margin:0; }
+input + label { cursor:pointer; }
+
+.input-text{ padding:5px; background:#3e4649; border:1px #7eab55 solid;}
+.input-text input { width:100%; border:none; background:#3e4649; color:#fff;}
+
+.radio-field{ display:inline-block; float:left;}
+
+.radio-field input + label { color:red; display:inline-block; width:55px; text-align:center; padding:4px; background:red; color:#fff;
+	-webkit-transition: all .15s linear;
+	transition: all .15s linear;
+}
+.radio-field input:checked + label { background:green; width:75px; }
+
+.half-side{ width:50%; float:left;}
+
+.minicolors-input{ display:none;}
+.minicolors-swatch{ width:77px; height:25px;}
+
+.field-set { margin-bottom:10px;}
+.field-set label{ width: 96px; float:left; padding-top:5px;  }
+.field-set label + div { margin-left:96px;}
+
+
+#slider-range{ margin-top:5px; overflow:hidden; border-color:#22a86e; background:none; border-radius: 7px; }
+.ui-slider .ui-slider-handle{ background:#22a86e; border:none; height: 12px; top: 0; }
+
+
+
+
+/*		result-board		*/
+
+#result-board { width:300px; top:10%; left:60%; background:#2e2f31; padding:16px; color:#fff; position:absolute; }
+
+span { color:#09a35f; font-family:Verdana, Geneva, sans-serif; font-size:16px; text-transform:uppercase;}
+
+#out_utube iframe{ max-width:300px; max-height:189px;}
