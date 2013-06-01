@@ -4,12 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>floating editor</title>
 
-<link rel="stylesheet" type="text/css" href="jquery.ui.slider.css" >
-<link rel="stylesheet" type="text/css" href="jquery.ui.theme.css" >
-<link rel="stylesheet" type="text/css" href="jquery.minicolors.css" >
-<link rel="stylesheet" type="text/css" href="editor.css" >
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.slider.css" >
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.theme.css" >
+<link rel="stylesheet" type="text/css" href="css/colorpicker.css" >
+<link rel="stylesheet" type="text/css" href="css/editor.css" >
 
-<script type="text/javascript" src="jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 
 </head>
 
@@ -30,7 +30,7 @@
             
             <div class="field-wrap">
             	<label>Profile Image</label>
-                <div class=""><input hidden type="file" id="profile_photo" ><label for="profile_photo"><img src="no-image.jpg"></label></div>
+                <div class=""><input hidden type="file" id="profile_photo" ><label for="profile_photo"><img src="img/no-image.jpg"></label></div>
             </div>
             
             <div class="field-wrap">
@@ -62,17 +62,17 @@
             
             <div class="field-set">
             	<label class="">BG Color</label>
-                <input class="pallet" id="bg-color">
+                <div class="pallet" id="bg-color"><div></div></div>
             </div>
             
             <div class="field-set">
             	<label class="">Text Color</label>
-                <input class="pallet" id="text-color">
+                <div class="pallet" id="text-color"><div></div></div>
             </div>
             
             <div class="field-set">
             	<label class="">Highlights</label>
-                <input class="pallet" id="text-color">
+                <div class="pallet" id="glow-color"><div></div></div>
             </div>
             
         </div>
@@ -109,12 +109,12 @@
         <div>result-board</div><br>
         <br>
         <div>
-        	Your are <span id="out_gender">Mr.</span><span id="out_full_name">Full Name</span> from <span id="out_Nationanality">INDIA</span> and <span id="out_relation">still Single</span><br>
+        	Your are <span id="out_gender">Mr.</span><span id="out_full_name">Seetpal singh</span> from <span id="out_Nationanality">Punjab</span> and <span id="out_relation">Married</span><br>
         </div>
         <div>Your skin color code is <span id="out_color_code">#09a35f</span>.</div><br>
         <div id="out_page_tags">Me, Myself, only me.</div><br>
         <div id="out_utube">
-        	<iframe width="300" height="189" src="http://www.youtube.com/embed/hXOkAypYlhk" frameborder="0" allowfullscreen></iframe>
+        	<iframe width="560" height="315" src="http://www.youtube.com/embed/8dodgVauiPY" frameborder="0" allowfullscreen></iframe>
         </div>
 
     </div>
@@ -122,8 +122,8 @@
 </div>
 
 
-<script type="text/javascript" src="jqueryui.js"></script>
-<script type="text/javascript" src="jquery.minicolors.js" ></script>
-<script type="text/javascript" src="editor.js" ></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript" src="js/colorpicker.js" ></script>
+<script type="text/javascript" src="js/editor.js" ></script>
 </body>
 </html>
