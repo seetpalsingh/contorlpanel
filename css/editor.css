@@ -4,6 +4,13 @@
 
 body{ padding:0; margin:0; border:none; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:13px;}
 
+a{
+	-webkit-transition:all .13s linear;
+	-moz-transition:all .13s linear;
+	-o-transition:all .13s linear;
+	transition:all .13s linear;
+}
+
 .clr{ clear:both; overflow:hidden; padding:0; margin:0; border:none; font-size:0%;}
 .clearfix:after{ font-size:0%; content:''; display:block; clear:both; height:0;}
 
@@ -18,10 +25,11 @@ a{ outline:none;}
 
 .dragger{ background: url(../img/drag.png) center no-repeat scroll; cursor:pointer; width:45px; height:45px }
 
-.cm-tabs{ width:45px; float:left;}
-.cm-tabs a{ display:block; height:45px; text-align:center; text-decoration:none; color:#fff; background-color:#1a9b62;}
-.cm-tabs a + a{ background:#22b372; }
-.cm-tabs a + a + a { background:#16a263;}
+.cm-tabs{ width:45px; float:left;  background: #1a9b62 url(../img/icons.png) 0 50px no-repeat scroll;}
+.cm-tabs a{ display:block; height:45px; text-align:center; text-decoration:none; color:#fff;}
+.cm-tabs a:first-child { background-color:#1a9b62;}
+.cm-tabs a + a + a { }
+.cm-tabs a + a + a + a { }
 
 .cm-panel{ padding:16px; margin-left:45px;  background:rgba(46, 47, 49, 1); width:243px;}
 
@@ -40,14 +48,14 @@ input + label { cursor:pointer; }
 
 .radio-field{ display:inline-block; float:left;}
 
-.radio-field input + label { color:red; display:inline-block; width:55px; text-align:center; padding:4px; background:red; color:#fff;
+.radio-field input + label { color:red; display:inline-block; width:55px; text-align:center; padding:5px 4px; background:#dd4a38; color:#fff;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	
 	-webkit-transition: all .15s linear;
 	transition: all .15s linear;
 }
-.radio-field input:checked + label { background:green; width:75px; }
+.radio-field input:checked + label { background:#7eab55; width:75px; }
 
 .half-side{ width:50%; float:left;}
 
@@ -69,8 +77,34 @@ input + label { cursor:pointer; }
 
 /*		result-board		*/
 
-#result-board { width:300px; top:10%; left:60%; background:#2e2f31; padding:16px; color:#fff; position:absolute; }
+#result-board { width:300px; top:10%; left:60%; background:#2e2f31; padding:16px; color:#fff; position:absolute;  word-break: break-all;}
 
 span { color:#09a35f; font-family:Verdana, Geneva, sans-serif; font-size:16px; text-transform:uppercase;}
 
 #out_utube iframe{ max-width:300px; max-height:189px;} 
+
+
+.pwd-by{ position:fixed; bottom:0; right:0; float:right; padding:3px; background:#333; color:#fff; font-size:10px;}
+.pwd-by a { color:#999; text-decoration:none; font-size:10px; }
+.pwd-by a:hover{ color:#fff;}
+
+/*		tags		*/
+
+span.tag {
+    background: rgb(255,255,255); /* Old browsers */  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%); /* FF3.6+ */  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(241,241,241,1)), color-stop(51%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1))); /* Chrome,Safari4+ */  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* Chrome10+,Safari5.1+ */  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* Opera 11.10+ */  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* IE10+ */  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* W3C */  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */;
+    border-radius: 4px;
+    padding: 3px;
+    height: auto;
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px;
+    color: #000;
+}
+span.tag span {
+    font-size: 12px;
+    text-transform: none;
+}
+span.tag a {
+    text-decoration: none;
+    color: #000;
+}

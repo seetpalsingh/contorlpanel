@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="css/jquery.ui.slider.css" >
 <link rel="stylesheet" type="text/css" href="css/jquery.ui.theme.css" >
 <link rel="stylesheet" type="text/css" href="css/colorpicker.css" >
+<link rel="stylesheet" type="text/css" href="css/colorpicker.css" >
 <link rel="stylesheet" type="text/css" href="css/editor.css" >
 
 <script type="text/javascript" src="js/script.js"></script>
@@ -20,7 +21,7 @@
     <div id="cm-editor">
         
         <div class="cm-tabs">
-        	<a title="Drag Me" class="dragger"></a><a href="#panel1" title="About Yourself">A</a><a href="#panel2" title="Change Colors">C</a><a href="#panel3" title="Page SEO"  >S</a>
+        	<a title="Drag Me" class="dragger"></a><a href="#panel1" title="About Yourself"></a><a href="#panel2" title="Change Colors"></a><a href="#panel3" title="Page SEO"  ></a>
         </div>
         
         <div class="cm-panel" id="panel1">
@@ -41,8 +42,8 @@
             
             <div class="field-wrap">
             	<label>Married</label>
-                <div class="radio-field"><input hidden type="radio" name="relation" id="married" alt="Married" ><label for="married">O</label></div>
-                <div class="radio-field"><input hidden type="radio" checked name="relation" id="single" alt="still single" ><label for="single">X</label></div>
+                <div class="radio-field"><input hidden type="radio" checked name="relation" id="married" alt="Married" ><label for="married">Yes</label></div>
+                <div class="radio-field"><input hidden type="radio" name="relation" id="single" alt="still single" ><label for="single">No</label></div>
             </div>
             
             <div class="field-wrap">
@@ -90,8 +91,8 @@
             
             <div class="field-wrap">
             	<label>Show Tags</label>
-                <div class="radio-field"><input hidden type="radio" name="tags_visible" id="show" ><label for="show">O</label></div>
-                <div class="radio-field"><input hidden type="radio" checked name="tags_visible" id="hide" ><label for="hide">X</label></div>
+                <div class="radio-field"><input hidden type="radio" name="tags_visible" id="show" ><label for="show">Yes</label></div>
+                <div class="radio-field"><input hidden type="radio" checked name="tags_visible" id="hide" ><label for="hide">No</label></div>
             </div>
         	
         	<div class="field-wrap">
@@ -106,12 +107,13 @@
     <div id="result-board">
     
     	<div class="dragger"></div>
-        <div>result-board</div><br>
+        <div>result-board</div>
         <br>
         <div>
         	Your are <span id="out_gender">Mr.</span><span id="out_full_name">Seetpal singh</span> from <span id="out_Nationanality">Punjab</span> and <span id="out_relation">Married</span><br>
         </div>
         <div>Your skin color code is <span id="out_color_code">#09a35f</span>.</div><br>
+        <div>Tags are listed below:</div>
         <div id="out_page_tags">Me, Myself, only me.</div><br>
         <div id="out_utube">
         	<iframe width="560" height="315" src="http://www.youtube.com/embed/8dodgVauiPY" frameborder="0" allowfullscreen></iframe>
@@ -119,11 +121,14 @@
 
     </div>
     
+    
+    <div class="pwd-by">Powered by: <a href="#">Codemode.in</a></div>
 </div>
 
 
 <script type="text/javascript" src="js/ui.js"></script>
 <script type="text/javascript" src="js/colorpicker.js" ></script>
+<script type="text/javascript" src="js/tags.js" ></script>
 <script type="text/javascript" src="js/editor.js" ></script>
 </body>
 </html>

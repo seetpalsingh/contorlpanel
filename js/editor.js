@@ -85,10 +85,13 @@ $(function() {
 	});
 	
 	
-	$('#cm-editor input[type="text"]').change(function(){
+	$('#cm-editor input[type="text"]').bind('change', function(){
 		var _id		=	$(this).attr('name');
 		var _split	=	$(this).val();
 		
+		if(_id	==	'page_title'){
+			document.title = _split;
+		}
 		console.log('#'+_id, _split);
 		$('#out_'+_id).html(_split);
 		
@@ -102,5 +105,25 @@ $(function() {
 		$('#out_'+_id).html(_val);
 		
 	});
+	
+	$('#page_tags').tagsInput({
+								onChange : function(){
+									$('#page_tags').queue(function(){
+											var _id		=	$(this).attr('name');
+											var _split	=	$(this).val();
+											
+											console.log('#'+_id, _split);
+											
+										if(!$('#hide').is(":checked")){
+											$('#out_'+_id).html(_split);
+											
+										}	// 	if ends
+										else{
+											$('#out_'+_id).html('');
+										};
+											$(this).dequeue();
+									});	
+								}
+							 });
 	
 });
